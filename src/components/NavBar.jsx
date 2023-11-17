@@ -16,7 +16,7 @@ const Navbar = () => {
             Pengaduan <br /> Masyarakat
           </span>
         </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 gap-5">
+        <div className="flex md:order-2 space-x-3 md:space-x-0 sm:gap-2 gap-0 justify-center items-center">
           <Link to="/login">
             <button
               type="button"
@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link to="/register">
             <button
               type="button"
-              className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28"
+              className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28 hidden sm:block"
             >
               Register
             </button>
@@ -65,7 +65,7 @@ const Navbar = () => {
           }`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-4 md:flex-row md:mt-0 md:border-0 md:bg-white">
             <li>
               <Link
                 to="/"
@@ -90,6 +90,14 @@ const Navbar = () => {
                 FAQ
               </Link>
             </li>
+            <Link to="/register">
+              <button
+                type="button"
+                className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28 block sm:hidden"
+              >
+                Register
+              </button>
+            </Link>
           </ul>
         </div>
       </div>

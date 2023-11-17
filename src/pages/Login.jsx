@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import ImageLogin from "../assets/img/ImageLogin.png";
+import InpunText from "../components/elements/InpunText";
+import Button from "../components/elements/Button";
 
 const LoginPage = () => {
   return (
@@ -12,24 +14,13 @@ const LoginPage = () => {
           <h1 className="text-4xl font-bold text-white text-center">
             Layanan Online <br /> Website Pengaduan Masyarakat
           </h1>
-          <div className="lg:w-3/4 w-[80%] h-fit py-8 bg-white flex flex-col items-center justify-center gap-6 rounded-[20px]">
+          <div className="lg:w-3/4 w-[80%] h-fit py-8 px-14 bg-white flex flex-col items-center justify-center gap-6 rounded-[20px]">
             <h2 className="text-3xl font-bold pb-3 text-black">Login</h2>
-            <input
-              type="text"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] block w-3/4 p-4 focus:outline-blue-700"
-              placeholder="Username"
-            />
-            <input
-              type="password"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-[20px] block w-3/4 p-4 focus:outline-blue-700"
-              placeholder="Password"
-            />
-            <button
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none rounded-[20px] text-lg font-bold p-3 text-center me-2 mb-2 w-3/4"
-            >
+            <InpunText type="text" placeholder="Username" />
+            <InpunText type="password" placeholder="Password" />
+            <Button type="submit" className="w-full">
               Login
-            </button>
+            </Button>
             <p className="text-sm text-slate-600">
               Belum punya akun?{" "}
               <Link to="/register" className="text-blue-700 font-bold">
