@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <nav className="bg-white fixed w-full z-20 top-0 start-0 border-b-2">
       <div className="max-w-screen-xl h-[80px] flex flex-wrap items-center justify-between mx-auto p-4 ">
-        <a href="/" className="flex items-center space-x-3">
+        <a href="/" className="flex items-center space-x-3 text-black">
           <span className="self-center text-lg font-bold whitespace-nowrap">
             Pengaduan <br /> Masyarakat
           </span>

@@ -2,27 +2,22 @@ import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import CardAdmin from "../components/CardAdmin";
 
-
 const HomePage = () => {
   return (
     <>
       <NavBar />
       <Hero />
       <div>
-        <div className="hero bg-blue-700">
-          <div className="hero-content text-center">
-            <div className="max-w-md">
-              <h1 className="text-3xl font-bold text-white pt-6 pb-6">
-                Jenis - Jenis Pelayanan
-              </h1>
-              <div className="flex justify-center items-center">
-                <div className="grid grid-rows-2 grid-flow-col gap-4 align-items-center">
-                  <CardAdmin />
-                  <CardAdmin />
-                  <CardAdmin />
-                  <CardAdmin />
-                </div>
-              </div>
+        <div className="flex flex-col gap-8 hero text-center px-[8%] py-10 dark:bg-white">
+          <h1 className="text-3xl font-bold text-white bg-blue-700 w-fit px-6 py-3 rounded-full">
+            Jenis - Jenis Pelayanan
+          </h1>
+          <div className="flex justify-center items-center">
+            <div className="grid grid-rows-2 grid-flow-col gap-10 align-items-center">
+              <CardAdmin />
+              <CardAdmin />
+              <CardAdmin />
+              <CardAdmin />
             </div>
           </div>
         </div>

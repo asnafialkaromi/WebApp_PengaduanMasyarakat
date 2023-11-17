@@ -4,13 +4,15 @@ import AdminControl from "../assets/img/admin-contol.png";
 const CardAdmin = () => {
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl w-sm h-sm">
-        <div className="card-body">
-          <h2 className="text-center text-2xl font-bold">User Control</h2>
+      <div className="card w-fit bg-slate-100 shadow-xl w-sm h-fit flex-row px-10 py-4 justify-center items-center">
+        <img className="h-fit w-fit" src={AdminControl} alt="Shoes" />
+        <div className="card-body text-left text-black">
+          <h2 className="text-2xl font-bold">User Control</h2>
+          <p className="">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+            sint. Velit officia consequat duis enim velit mollit.
+          </p>
         </div>
-        <figure>
-          <img className="h-32 w-46 pb-8 object-cover" src={AdminControl} alt="Shoes" />
-        </figure>
       </div>
     </div>
   );
