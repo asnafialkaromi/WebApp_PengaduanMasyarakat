@@ -22,8 +22,7 @@ const Hero = () => {
         />
       </div>
       <div className="hero min-sm-screen bg-base-200 h-auto pb-6 pt-6 dark:bg-white text-black">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <img src={QuestionImage} className="max-w-sm rounded-ld ml-7" />
+        <div className="hero-content md:flex-row flex-col lg:w-full">
           <div>
             <h1 className="text-5xl font-bold">
               Kenapa Menggunakan Website ini?
@@ -44,6 +43,7 @@ const Hero = () => {
               hidup bersama-sama!
             </p>
           </div>
+          <img src={QuestionImage} className="max-w-sm rounded-ld" />
         </div>
       </div>
     </div>
