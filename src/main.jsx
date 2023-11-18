@@ -8,6 +8,7 @@ import RegisterPage from "./pages/Register.jsx";
 import BeritaPage from "./pages/Berita.jsx";
 import Faq from "./pages/Faq.jsx";
 import Laporan from "./pages/Laporan.jsx";
+import Lapuser from "./pages/LaporanKu.jsx";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: "/laporan",
     element: <Laporan />,
+  },
+  {
+    path: "/lapuser",
+    element: <Lapuser />,
   },
 ]);
 
