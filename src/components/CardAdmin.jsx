@@ -1,5 +1,5 @@
 import React from "react";
-import AdminControl from "../assets/img/admin-contol.png";
+import AdminControl from "../assets/img/admin-control.png";
 
 const CardAdmin = () => {
   return (
