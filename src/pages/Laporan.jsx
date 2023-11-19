@@ -7,7 +7,7 @@ const Laporan = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col dark:bg-slate-200 h-fit pt-[90px] pb-10 items-center gap-6">
+      <div className="flex flex-col bg-slate-200 h-fit pt-[90px] pb-10 items-center gap-6">
         <div className="flex flex-row px-4 max-w-[1280px] w-full h-fit justify-between mt-5">
           <h1 className="text-4xl text-black font-bold ">
             Riwayat Laporan Anda

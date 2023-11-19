@@ -7,7 +7,7 @@ const InpunText = (props) => {
       <input
         type={type}
         placeholder={placeholder}
-        className="input w-full rounded-full bg-base-200 dark:bg-transparent border border-slate-400 dark:border-slate-400 focus:outline-blue-300 text-black"
+        className="input w-full rounded-full bg-base-200 border border-slate-400  focus:outline-blue-300 text-black"
       />
     </>
   );

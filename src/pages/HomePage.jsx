@@ -8,7 +8,7 @@ const HomePage = () => {
     <>
       <NavBar />
       <Hero />
-      <div className=" flex bg-white min-h-fit py-40 dark:bg-white text-black items-center justify-center">
+      <div className=" flex bg-white min-h-fit py-40  text-black items-center justify-center">
         <div className="flex max-w-7xl gap-32 md:flex-row flex-col lg:w-full xl:p-0 p-5">
           <div>
             <h1 className="text-5xl font-bold">
@@ -33,7 +33,7 @@ const HomePage = () => {
           <img src={QuestionImage} className="max-w-sm max-h-96 rounded-ld" />
         </div>
       </div>
-      <div className="flex w-[100%] min-h-screen bg-white dark:bg-white items-center justify-center">
+      <div className="flex w-[100%] min-h-screen bg-white items-center justify-center">
         <div className="flex flex-col gap-16 items-center max-w-7xl  text-center px-4">
           <h1 className="text-3xl font-bold text-white bg-blue-700 w-fit px-6 py-3 rounded-full">
             Jenis - Jenis Pelayanan

@@ -6,7 +6,7 @@ const BeritaPage = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col dark:bg-slate-200 w-screen h-fit pt-[90px] pb-10 items-center gap-6">
+      <div className="flex flex-col bg-slate-200 w-screen h-fit pt-[90px] pb-10 items-center gap-6">
         <div className="flex flex-col gap-5 px-4 max-w-[1280px] justify-center">
           <h1 className="text-3xl font-bold text-white bg-blue-700 w-fit px-6 py-3 rounded-full shadow-xl">
             Berita Terkini
