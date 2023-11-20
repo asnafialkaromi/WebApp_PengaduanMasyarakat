@@ -47,28 +47,36 @@ const SideBar = () => {
           <div className="w-full h-full flex flex-col gap-4">
             <p className="text-lg font-semibold">Fitur Admin</p>
             <div className="flex flex-col gap-4">
-              <Link to="" className="flex flex-row items-center gap-4">
+              <Link
+                to="/dashboard"
+                className="flex flex-row items-center gap-4"
+              >
                 <img src={DashboardIcon} alt="icon" className="w-6 h-6" />
                 Dashboard
               </Link>
-              <Link to="" className="flex flex-row items-center gap-4">
+              <Link
+                to="/pengaduan"
+                className="flex flex-row items-center gap-4"
+              >
                 <img src={LaporanIcon} alt="icon" className="w-6 h-6" />
                 Pengaduan
               </Link>
-              <Link to="" className="flex flex-row items-center gap-4">
+              <Link to="/petugas" className="flex flex-row items-center gap-4">
                 <img src={PetugasIcon} alt="icon" className="w-6 h-6" />
                 Petugas
               </Link>
             </div>
           </div>
         </div>
-        <Button
-          type="submit"
-          className="w-full h-fit focus:bg-blue-700 justify-start"
-        >
-          <img src={LogoutIcon} alt="icon" className="w-8 h-8" />
-          Logout
-        </Button>
+        <Link to="/">
+          <Button
+            type="submit"
+            className="w-full h-fit focus:bg-blue-700 justify-start"
+          >
+            <img src={LogoutIcon} alt="icon" className="w-8 h-8" />
+            Logout
+          </Button>
+        </Link>
       </div>
     </div>
   );
