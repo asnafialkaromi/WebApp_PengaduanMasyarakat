@@ -8,13 +8,13 @@ const HomePage = () => {
     <>
       <NavBar />
       <Hero />
-      <div className=" flex bg-white min-h-fit py-40  text-black items-center justify-center">
-        <div className="flex max-w-7xl gap-32 md:flex-row flex-col lg:w-full xl:p-0 p-5">
+      <div className=" flex bg-white min-h-fit py-32 text-black items-center justify-center">
+        <div className="flex max-w-7xl lg:gap-32 gap-10 lg:flex-row flex-col justify-center items-center lg:w-full xl:p-0 p-5">
           <div>
-            <h1 className="text-5xl font-bold">
+            <h1 className="xl:text-5xl md:text-4xl text-2xl font-bold">
               Kenapa Menggunakan Website ini?
             </h1>
-            <p className="py-6">
+            <p className="py-6 xl:text-xl md:text-lg text-base">
               Kami berkomitmen untuk menyediakan sarana yang efektif dan efisien
               bagi Anda untuk menyampaikan keluhan, memberikan saran, dan
               berinteraksi dengan pemerintah daerah. Dengan mengakses website
@@ -30,12 +30,15 @@ const HomePage = () => {
               hidup bersama-sama!
             </p>
           </div>
-          <img src={QuestionImage} className="max-w-sm max-h-96 rounded-ld" />
+          <img
+            src={QuestionImage}
+            className="sm:max-w-sm sm:max-h-96 max-w-xs max-h-80 rounded-ld"
+          />
         </div>
       </div>
       <div className="flex w-[100%] min-h-screen bg-white items-center justify-center">
         <div className="flex flex-col gap-16 items-center max-w-7xl  text-center px-4">
-          <h1 className="text-3xl font-bold text-white bg-blue-700 w-fit px-6 py-3 rounded-full">
+          <h1 className="sm:text-3xl text-xl font-bold text-white bg-blue-700 w-fit px-6 py-3 rounded-full">
             Jenis - Jenis Pelayanan
           </h1>
           <div className="flex justify-center items-center">

@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/NavBar";
-import Accordion from "../components/Accordion";
+import QuestionAnswer from "../components/QuestionAnswer";
 
 const Faq = () => {
   return (
     <>
       <Navbar />
-      <Accordion />
+      <QuestionAnswer />
     </>
   );
 };

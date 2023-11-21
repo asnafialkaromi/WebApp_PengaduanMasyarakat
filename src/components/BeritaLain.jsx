@@ -2,19 +2,19 @@ import ImageNews from "../assets/img/ImageNews.png";
 
 const BeritaLain = () => {
   return (
-    <div className="w-[1192px] h-fit bg-white shadow-xl rounded-lg p-6">
-      <h2 className="font-bold text-xl text-left w-full text-black pb-1">
-        Peralihan Musim di Wilayah Bojonegoro, Masyrakat Diminta Waspada Badai
+    <div className="md:w-full w-[300px] bg-white shadow-xl rounded-lg p-6">
+      <h2 className="font-bold md:text-lg text-sm text-left text-black pb-1">
+        Peralihan Musim di Wilayah Bojonegoro, Masyarakat Diminta Waspada Badai
         Petir
       </h2>
-      <p className="pb-3">6 November 2023</p>
-      <div className="flex flex-row gap-3">
+      <p className="pb-3 md:text-base text-xs">6 November 2023</p>
+      <div className="flex flex-col md:flex-row gap-3 justify-center">
         <img
           src={ImageNews}
           alt="news"
-          className="rounded-lg w-[288px] h-[162px]"
+          className="rounded-lg md:w-[288px] w-[250px] h-auto"
         />
-        <p className="text-black text-[14px] font-medium">
+        <p className="text-black md:text-base text-sm font-normal">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
           autem molestias! Eveniet neque obcaecati voluptatem inventore cum
           molestiae expedita illo soluta accusantium quibusdam, autem
