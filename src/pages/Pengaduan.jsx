@@ -1,7 +1,7 @@
 import React from "react";
 import SideBar from "../components/elements/SideBar";
 import NavBarAdmin from "../components/elements/NavBarAdmin";
-import CardPengaduan from "../components/CardPengaduan";
+import CardPengaduan from "../components/elements/CardPengaduan";
 
 const Pengaduan = () => {
   return (
@@ -23,7 +23,7 @@ const Pengaduan = () => {
             checked
           />
           <div role="tabpanel" className="tab-content p-4 w-full h-full">
-            <div className="flex flex-row w-full flex-wrap gap-4 justify-center">
+            <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-start justify-center">
               <CardPengaduan label="Diterima" />
               <CardPengaduan label="Diterima" />
               <CardPengaduan label="Diterima" />
@@ -40,8 +40,11 @@ const Pengaduan = () => {
             className="tab text-2xl font-semibold"
             aria-label="Tertunda"
           />
-          <div role="tabpanel" className="tab-content p-4 w-full h-full">
-            <div className="flex flex-row w-full flex-wrap gap-4 justify-center">
+          <div
+            role="tabpanel"
+            className="tab-content p-4 w-full h-full xl:justify-start justify-center"
+          >
+            <div className="flex flex-row w-full flex-wrap gap-4">
               <CardPengaduan label="Tertunda" className="bg-red-400" />
               <CardPengaduan label="Tertunda" className="bg-red-400" />
               <CardPengaduan label="Tertunda" className="bg-red-400" />

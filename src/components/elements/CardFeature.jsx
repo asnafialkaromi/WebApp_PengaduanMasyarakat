@@ -1,7 +1,7 @@
 import React from "react";
-import AdminControl from "../assets/img/admin-control.png";
+import AdminControl from "../../assets/img/admin-control.png";
 
-const CardAdmin = () => {
+const CardFeature = () => {
   return (
     <div>
       <div className="card md:w-fit sm:max-w-xl bg-slate-100 shadow-xl w-sm h-fit sm:flex-row px-10 py-4 justify-center items-center">
@@ -18,4 +18,4 @@ const CardAdmin = () => {
   );
 };
 
-export default CardAdmin;
+export default CardFeature;

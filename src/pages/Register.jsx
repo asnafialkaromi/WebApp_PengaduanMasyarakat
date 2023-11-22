@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ImageLogin from "../assets/img/ImageLogin.png";
-import InpunText from "../components/elements/InpunText";
+import InputText from "../components/elements/InputText";
 import Button from "../components/elements/Button";
 
 const RegisterPage = () => {
@@ -16,10 +16,10 @@ const RegisterPage = () => {
           </h1>
           <div className="lg:w-3/4 w-[80%] h-fit py-6 px-14 bg-white flex flex-col items-center justify-center gap-6 rounded-[20px]">
             <h2 className="text-3xl font-bold pb-3 text-black">Register</h2>
-            <InpunText type="text" placeholder="Nama" />
-            <InpunText type="text" placeholder="Username" />
-            <InpunText type="text" placeholder="No. Hp" />
-            <InpunText type="password" placeholder="Password" />
+            <InputText type="text" placeholder="Nama" />
+            <InputText type="text" placeholder="Username" />
+            <InputText type="text" placeholder="No. Hp" />
+            <InputText type="password" placeholder="Password" />
             <Button type="submit" className="w-full">
               Register
             </Button>

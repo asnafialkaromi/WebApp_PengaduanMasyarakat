@@ -1,6 +1,6 @@
-import ImageNews from "../assets/img/ImageNews.png";
+import ImageNews from "../../assets/img/ImageNews.png";
 
-const BeritaTerkini = (props) => {
+const CardLatestNews = (props) => {
   const { className } = props;
   return (
     <div
@@ -20,4 +20,4 @@ const BeritaTerkini = (props) => {
   );
 };
 
-export default BeritaTerkini;
+export default CardLatestNews;

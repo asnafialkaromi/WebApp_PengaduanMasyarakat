@@ -16,7 +16,7 @@ const Navbar = () => {
             Pengaduan <br /> Masyarakat
           </span>
         </Link>
-        <div className="flex md:order-2 space-x-3 md:space-x-0 sm:gap-2 gap-0 justify-center items-center">
+        <div className="flex md:order-2 space-x-3 md:space-x-0 sm:gap-2 justify-center items-center">
           <Link to="/login">
             <button
               type="button"
@@ -69,7 +69,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                className="block py-2 px-3 text-black rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ml-6"
               >
                 Home
               </Link>
@@ -77,7 +77,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/berita"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ml-6"
               >
                 Berita
               </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/faq"
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ml-6"
               >
                 FAQ
               </Link>

@@ -7,11 +7,11 @@ import LoginPage from "./pages/Login.jsx";
 import RegisterPage from "./pages/Register.jsx";
 import BeritaPage from "./pages/Berita.jsx";
 import Faq from "./pages/Faq.jsx";
-import Laporan from "./pages/Laporan.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
-import Lapuser from "./pages/LaporanKu.jsx";
 import Petugas from "./pages/Petugas.jsx";
 import Pengaduan from "./pages/Pengaduan.jsx";
+import BuatLaporan from "./pages/BuatLaporan.jsx";
+import RiwayatLaporan from "./pages/RiwayatLaporan.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,16 +35,16 @@ const router = createBrowserRouter([
     element: <Faq />,
   },
   {
-    path: "/laporan",
-    element: <Laporan />,
+    path: "/riwayat-laporan",
+    element: <RiwayatLaporan />,
   },
   {
     path: "/dashboard",
     element: <Dashboard />,
   },
   {
-    path: "/lapuser",
-    element: <Lapuser />,
+    path: "/buat-laporan",
+    element: <BuatLaporan />,
   },
   {
     path: "/petugas",

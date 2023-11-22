@@ -1,6 +1,6 @@
-import Gambar1 from "../assets/img/ImageNews.png";
+import Gambar1 from "../../assets/img/ImageNews.png";
 
-const CardDiterima = (props) => {
+const CardPengaduan = (props) => {
   const { label, className } = props;
   return (
     <div className="card w-[356px] h-[377px] bg-base-100 shadow-xl">
@@ -25,4 +25,4 @@ const CardDiterima = (props) => {
   );
 };
 
-export default CardDiterima;
+export default CardPengaduan;

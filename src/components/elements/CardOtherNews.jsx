@@ -1,6 +1,6 @@
-import ImageNews from "../assets/img/ImageNews.png";
+import ImageNews from "../../assets/img/ImageNews.png";
 
-const BeritaLain = () => {
+const CardOtherNews = () => {
   return (
     <div className="md:w-full w-[300px] bg-white shadow-xl rounded-lg p-6">
       <h2 className="font-bold md:text-lg text-sm text-left text-black pb-1">
@@ -30,4 +30,4 @@ const BeritaLain = () => {
   );
 };
 
-export default BeritaLain;
+export default CardOtherNews;
