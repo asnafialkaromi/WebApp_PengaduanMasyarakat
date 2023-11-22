@@ -2,7 +2,7 @@ import ImageNews from "../../assets/img/ImageNews.png";
 
 const LaporanCard = () => {
   return (
-    <div className="card md:flex-row xl:w-fit bg-white shadow-xl w-fit h-fit flex-col md:p-4 p-5 md:justify-start md:items-center gap-4">
+    <div className="card sm:flex-row bg-white shadow-xl w-fit h-fit flex-col md:p-4 p-5 md:justify-start md:items-center gap-4">
       <div className="w-[280px] h-[187px]">
         <img
           src={ImageNews}
