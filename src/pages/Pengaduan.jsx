@@ -23,7 +23,7 @@ const Pengaduan = () => {
             checked
           />
           <div role="tabpanel" className="tab-content p-4 w-full h-full">
-            <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-start justify-center">
+            <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-center justify-center">
               <CardPengaduan label="Diterima" />
               <CardPengaduan label="Diterima" />
               <CardPengaduan label="Diterima" />
@@ -42,9 +42,9 @@ const Pengaduan = () => {
           />
           <div
             role="tabpanel"
-            className="tab-content p-4 w-full h-full xl:justify-start justify-center"
+            className="tab-content p-4 w-full h-full r"
           >
-            <div className="flex flex-row w-full flex-wrap gap-4">
+            <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-center justify-cente">
               <CardPengaduan label="Tertunda" className="bg-red-400" />
               <CardPengaduan label="Tertunda" className="bg-red-400" />
               <CardPengaduan label="Tertunda" className="bg-red-400" />
