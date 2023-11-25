@@ -2,6 +2,7 @@ import React from "react";
 import SideBar from "../components/elements/SideBar";
 import NavBarAdmin from "../components/elements/NavBarAdmin";
 import CardPengaduan from "../components/elements/CardPengaduan";
+import CardPengaduanAdmin from "../components/elements/CardPengaduanAdmin";
 
 const Pengaduan = () => {
   return (
@@ -24,12 +25,26 @@ const Pengaduan = () => {
           />
           <div role="tabpanel" className="tab-content p-4 w-full h-full">
             <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-center justify-center">
-              <CardPengaduan label="Diterima" />
-              <CardPengaduan label="Diterima" />
-              <CardPengaduan label="Diterima" />
-              <CardPengaduan label="Diterima" />
-              <CardPengaduan label="Diterima" />
-              <CardPengaduan label="Diterima" />
+              <CardPengaduanAdmin
+                badgetitle="Diterima"
+                badgecolor="bg-green-500"
+                btndisplay="hidden"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Diterima"
+                badgecolor="bg-green-500"
+                btndisplay="hidden"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Diterima"
+                badgecolor="bg-green-500"
+                btndisplay="hidden"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Diterima"
+                badgecolor="bg-green-500"
+                btndisplay="hidden"
+              />
             </div>
           </div>
 
@@ -40,17 +55,28 @@ const Pengaduan = () => {
             className="tab text-2xl font-semibold"
             aria-label="Tertunda"
           />
-          <div
-            role="tabpanel"
-            className="tab-content p-4 w-full h-full r"
-          >
+          <div role="tabpanel" className="tab-content p-4 w-full h-full r">
             <div className="flex flex-row w-full flex-wrap gap-4 xl:justify-center justify-cente">
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
-              <CardPengaduan label="Tertunda" className="bg-red-400" />
+              <CardPengaduanAdmin
+                badgetitle="Tertunda"
+                badgecolor="bg-red-500"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Tertunda"
+                badgecolor="bg-red-500"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Tertunda"
+                badgecolor="bg-red-500"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Tertunda"
+                badgecolor="bg-red-500"
+              />
+              <CardPengaduanAdmin
+                badgetitle="Tertunda"
+                badgecolor="bg-red-500"
+              />
             </div>
           </div>
         </div>

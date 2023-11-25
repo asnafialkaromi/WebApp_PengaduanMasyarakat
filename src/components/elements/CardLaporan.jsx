@@ -1,24 +1,27 @@
 import ImageNews from "../../assets/img/ImageNews.png";
 
-const LaporanCard = () => {
+const CardLaporan = () => {
   return (
-    <div className="card sm:flex-row bg-white shadow-xl w-fit h-fit flex-col md:p-4 p-5 md:justify-start md:items-center gap-4">
-      <div className="w-[280px] h-[187px]">
+    <div className="flex bg-white shadow-xl w-full h-fit flex-row md:p-4 p-5 rounded-2xl gap-4">
+      <div className="w-[300px] h-[169px] flex-none">
         <img
           src={ImageNews}
           alt="Laporan"
           className="w-full h-full object-cover rounded-xl"
         />
       </div>
-      <div className="card-body md:max-w-[300px] max-w-[280px] md:w-fit w-full md:h-fit p-0 text-left text-black">
-        <h2 className="card-title text-left w-full">12 September 2023</h2>
-        <p className="text-left w-fit">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam libero
-          deserunt, fuga odit est magni eum perspiciatis numquam cum facilis
-        </p>
+      <div className="w-full h-auto full flex flex-col items-end justify-between">
+        <div className="flex flex-col gap-1 w-full">
+          <p className="text-xl font-bold bg-blue-700 rounded-full text-white w-fit px-4">
+            12 September 2023
+          </p>
+          <p className="text-xl font-bold">Nama Pelapor</p>
+          <p className="text-sm font-regular">Isi laporan</p>
+        </div>
+        <p>Status</p>
       </div>
     </div>
   );
 };
 
-export default LaporanCard;
+export default CardLaporan;

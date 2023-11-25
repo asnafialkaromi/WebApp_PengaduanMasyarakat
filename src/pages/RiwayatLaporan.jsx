@@ -1,7 +1,8 @@
 import React from "react";
 import NavBarUser from "../components/elements/NavBarUser";
 import Button from "../components/elements/Button";
-import LaporanCard from "../components/elements/CardLaporan";
+import CardLaporan from "../components/elements/CardLaporan";
+import { Link } from "react-router-dom";
 
 const Laporan = () => {
   return (
@@ -12,14 +13,16 @@ const Laporan = () => {
           <h1 className="text-4xl text-black font-bold ">
             Riwayat Laporan Anda
           </h1>
-          <Button type="submit" className="w-fit">
-            Tambah Laporan
-          </Button>
+          <Link to="/buat-laporan">
+            <Button type="submit" className="btn-md w-fit text-xl">
+              Buat Laporan
+            </Button>
+          </Link>
         </div>
-        <div className="xl:grid xl:grid-cols-2 flex flex-col gap-5 px-4 xl:w-[1280px] w-full h-fit items-center justify-center">
-          <LaporanCard />
-          <LaporanCard />
-          <LaporanCard />
+        <div className="flex flex-col gap-5 px-4 w-full max-w-7xl h-fit items-center justify-center">
+          <CardLaporan />
+          <CardLaporan />
+          <CardLaporan />
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ const Button = (props) => {
   return (
     <button
       type={type}
-      className={`btn btn-block text-sm text-white font-bold rounded-full bg-blue-700 hover:bg-blue-800 py-3 border-none ${className}`}
+      className={`btn btn-block text-sm text-white font-bold rounded-full bg-blue-700 hover:bg-blue-800 border-none ${className}`}
     >
       {children}
     </button>
