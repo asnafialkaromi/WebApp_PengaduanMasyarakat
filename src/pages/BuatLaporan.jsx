@@ -4,6 +4,7 @@ import FormBuatLaporan from "../components/section/FormBuatLaporan";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
+import Footer from "../components/elements/Footer";
 
 const BuatLaporan = () => {
   const dispatch = useDispatch();
@@ -24,6 +25,7 @@ const BuatLaporan = () => {
     <>
       <NavBarUser />
       <FormBuatLaporan />
+      <Footer/>
     </>
   );
 };

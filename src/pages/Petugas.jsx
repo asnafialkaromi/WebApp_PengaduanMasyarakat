@@ -1,14 +1,17 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import NavBarAdmin from "../components/elements/NavBarAdmin";
 import SideBar from "../components/elements/SideBar";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { getMe } from "../features/authSlice";
 
 const Petugas = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isError, user } = useSelector((state) => state.auth);
+
+  const [Role, setRole] = useState([]);
 
   useEffect(() => {
     dispatch(getMe());
@@ -22,6 +25,30 @@ const Petugas = () => {
       navigate("/");
     }
   }, [isError, navigate]);
+
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const getUsers = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/user");
+      const allRole = response.data;
+
+      const Role = allRole.filter((role) => role.role === "admin");
+
+      setRole(Role);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deleteUser = async (userId) => {
+    await axios.delete(`http://localhost:5000/user/${userId}`);
+    getUsers();
+  };
 
   return (
     <div className="drawer lg:drawer-open">
@@ -37,35 +64,28 @@ const Petugas = () => {
                 <tr className="bg-blue-700 text-white">
                   <th>NO</th>
                   <th>NAMA</th>
+                  <th>EMAIL</th>
                   <th>NO TELP</th>
-                  <th>LEVEL</th>
                   <th>AKSI</th>
                 </tr>
               </thead>
               <tbody>
-                {/* row 1 */}
-                <tr className="bg-white">
-                  <th>1</th>
-                  <td>Indra Rahma Darmawan</td>
-                  <td>12561236163</td>
-                  <td>Admin</td>
-                  <td>
-                    <button className="btn btn-ghost btn-xs text-red-600 p-0">
-                      Hapus
-                    </button>
-                  </td>
-                </tr>
-                <tr className="bg-white">
-                  <th>2</th>
-                  <td>Indra Rahma Darmawan</td>
-                  <td>12561236163</td>
-                  <td>Admin</td>
-                  <td>
-                    <button className="btn btn-ghost btn-xs text-red-600 p-0">
-                      Hapus
-                    </button>
-                  </td>
-                </tr>
+                {Role.map((user, index) => (
+                  <tr className="bg-white" key={user.uuid}>
+                    <td>{index + 1}</td>
+                    <td>{user.name}</td>
+                    <td>{user.email}</td>
+                    <td>{user.noTelp}</td>
+                    <td>
+                      <button
+                        className="btn btn-ghost btn-xs text-red-600 p-0"
+                        onClick={() => deleteUser(user.uuid)}
+                      >
+                        Hapus
+                      </button>
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
