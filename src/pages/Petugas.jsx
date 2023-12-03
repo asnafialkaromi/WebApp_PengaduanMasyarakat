@@ -1,8 +1,28 @@
-import React from "react";
+import { useEffect } from "react";
 import NavBarAdmin from "../components/elements/NavBarAdmin";
 import SideBar from "../components/elements/SideBar";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { getMe } from "../features/authSlice";
 
 const Petugas = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isError, user } = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isError) {
+      navigate("/login");
+    }
+    if (user && user.role !== "admin") {
+      navigate("/");
+    }
+  }, [isError, navigate]);
+
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />

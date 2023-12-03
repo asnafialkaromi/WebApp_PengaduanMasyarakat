@@ -3,9 +3,21 @@ import DashboardIcon from "../../assets/icons/Dashboard.svg";
 import LaporanIcon from "../../assets/icons/Laporan.svg";
 import LogoutIcon from "../../assets/icons/Logout.svg";
 import PetugasIcon from "../../assets/icons/Petugas.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { LogOut, reset } from "../../features/authSlice";
 
 const SideBar = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isSuccess, user } = useSelector((state) => state.auth);
+  const onLogout = () => {
+    dispatch(LogOut());
+    dispatch(reset());
+    navigate("/login");
+  };
+
   return (
     <div className="drawer-side z-20">
       <label
@@ -68,15 +80,14 @@ const SideBar = () => {
             </div>
           </div>
         </div>
-        <Link to="/">
-          <Button
-            type="submit"
-            className="w-full h-fit focus:bg-blue-700 justify-start"
-          >
-            <img src={LogoutIcon} alt="icon" className="w-8 h-8" />
-            Logout
-          </Button>
-        </Link>
+        <Button
+          type="button"
+          onClick={onLogout}
+          className="w-full h-fit focus:bg-blue-700 justify-start no-animation"
+        >
+          <img src={LogoutIcon} alt="icon" className="w-8 h-8" />
+          Logout
+        </Button>
       </div>
     </div>
   );

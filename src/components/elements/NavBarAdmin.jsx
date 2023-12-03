@@ -1,6 +1,8 @@
+import { useSelector } from "react-redux";
+
 const NavBarAdmin = (props) => {
   const { children } = props;
-
+  const { user } = useSelector((state) => state.auth);
   return (
     <div className="bg-base-100 text-base-content sticky top-0 z-10 flex h-16 w-full justify-center">
       <label
@@ -25,7 +27,7 @@ const NavBarAdmin = (props) => {
       </label>
       <div className="flex flex-row w-full p-2 items-center justify-between">
         <h1 className="text-4xl font-bold">{children}</h1>
-        <p>Username</p>
+        <p>{user && user.name}</p>
       </div>
     </div>
   );

@@ -1,8 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { LogOut, reset } from "../../features/authSlice";
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const { isSuccess, user } = useSelector((state) => state.auth);
+  const onLogout = () => {
+    dispatch(LogOut());
+    dispatch(reset());
+    navigate("/login");
+  };
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
@@ -17,22 +28,45 @@ const Navbar = () => {
           </span>
         </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 sm:gap-2 justify-center items-center">
-          <Link to="/login">
-            <button
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 font-semibold rounded-full text-sm px-4 py-2 text-center w-28"
-            >
-              Login
-            </button>
-          </Link>
-          <Link to="/register">
-            <button
-              type="button"
-              className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28 hidden sm:block"
-            >
-              Register
-            </button>
-          </Link>
+          {isSuccess ? (
+            <>
+              <Link to="/riwayat-laporan">
+                <button
+                  type="button"
+                  className="text-white bg-blue-700 hover:bg-blue-800 font-semibold rounded-full text-sm px-4 py-2 text-center w-28"
+                >
+                  Laporanku
+                </button>
+              </Link>
+              <button
+                type="button"
+                className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28 hidden sm:block"
+                onClick={onLogout}
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login">
+                <button
+                  type="button"
+                  className="text-white bg-blue-700 hover:bg-blue-800 font-semibold rounded-full text-sm px-4 py-2 text-center w-28"
+                >
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button
+                  type="button"
+                  className="text-blue-700 hover:bg-blue-700 hover:text-white ring-blue-700 font-semibold rounded-full text-sm px-4 py-2 text-center outline outline-2 outline-offset-0 outline-blue-700 w-28 hidden sm:block"
+                >
+                  Register
+                </button>
+              </Link>
+            </>
+          )}
+
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"

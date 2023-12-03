@@ -1,10 +1,48 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import NavBarUser from "../components/elements/NavBarUser";
 import Button from "../components/elements/Button";
 import CardLaporan from "../components/elements/CardLaporan";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { getMe } from "../features/authSlice";
 
 const Laporan = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isError } = useSelector((state) => state.auth);
+
+  const [reports, setReports] = useState([]);
+
+  useEffect(() => {
+    getReports();
+  }, []);
+
+  const getReports = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/report");
+      setReports(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    dispatch(getMe());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (isError) {
+      navigate("/login");
+    }
+  }, [isError, navigate]);
+
+  const formatDate = (dateString) => {
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    return new Date(dateString).toLocaleDateString("id-ID", options);
+  };
+
   return (
     <>
       <NavBarUser />
@@ -20,9 +58,17 @@ const Laporan = () => {
           </Link>
         </div>
         <div className="flex flex-col gap-5 px-4 w-full max-w-7xl h-fit items-center justify-center">
-          <CardLaporan />
-          <CardLaporan />
-          <CardLaporan />
+          {reports.map((report) => (
+            <CardLaporan
+              key={report.id}
+              image={report.url}
+              tanggal={formatDate(report.createdAt)}
+              alamat={report.alamat}
+              nama={report.name}
+              laporan={report.pengaduan}
+              status={report.status}
+            />
+          ))}
         </div>
       </div>
     </>

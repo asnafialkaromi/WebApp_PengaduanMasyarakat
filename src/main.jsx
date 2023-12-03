@@ -12,6 +12,11 @@ import Petugas from "./pages/Petugas.jsx";
 import Pengaduan from "./pages/Pengaduan.jsx";
 import BuatLaporan from "./pages/BuatLaporan.jsx";
 import RiwayatLaporan from "./pages/RiwayatLaporan.jsx";
+import axios from "axios";
+import { Provider } from "react-redux";
+import store from "./app/store";
+
+axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
   {
@@ -58,6 +63,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>
 );
