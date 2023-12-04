@@ -6,8 +6,11 @@ import CardPengaduanAdmin from "../components/elements/CardPengaduanAdmin";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Pengaduan = () => {
+  window.scrollTo(0, 0);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isError, user } = useSelector((state) => state.auth);
@@ -57,15 +60,22 @@ const Pengaduan = () => {
     return new Date(dateString).toLocaleDateString("id-ID", options);
   };
 
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col bg-slate-200 items-center ">
+      <div className="drawer-content flex flex-col bg-slate-200 items-center " > 
         {/* Page content here */}
         <NavBarAdmin>Pengaduan</NavBarAdmin>
         <div
           role="tablist"
           className="tabs tabs-bordered w-full h-fit items-start p-4"
+          data-aos="fade-down" data-aos-duration="2000"
         >
           <input
             type="radio"

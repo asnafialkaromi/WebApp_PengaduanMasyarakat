@@ -8,8 +8,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
 import Footer from "../components/elements/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Laporan = () => {
+  window.scrollTo(0, 0);
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isError } = useSelector((state) => state.auth);
@@ -47,7 +57,7 @@ const Laporan = () => {
   return (
     <>
       <NavBarUser />
-      <div className="flex flex-col bg-slate-200 min-h-screen h-fit pt-[90px] pb-10 items-center gap-6">
+      <div className="flex flex-col bg-slate-200 min-h-screen h-fit pt-[90px] pb-10 items-center gap-6" >
         <div className="flex flex-row px-4 max-w-[1280px] w-full h-fit justify-between mt-5">
           <h1 className="text-4xl text-black font-bold ">
             Riwayat Laporan Anda
@@ -58,7 +68,7 @@ const Laporan = () => {
             </Button>
           </Link>
         </div>
-        <div className="flex flex-col gap-5 px-4 w-full max-w-7xl h-fit items-center justify-center">
+        <div className="flex flex-col gap-5 px-4 w-full max-w-7xl h-fit items-center justify-center" data-aos="fade-up" data-aos-duration="2000">
           {reports.map((report) => (
             <CardLaporan
               key={report.id}
