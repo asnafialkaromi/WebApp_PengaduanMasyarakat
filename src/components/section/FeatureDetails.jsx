@@ -1,4 +1,6 @@
 import CardFeature from "../elements/CardFeature";
+import Img1 from "../../assets/img/admin-control.png";
+import Img2 from "../../assets/img/user-control.png";
 const FeatureDetails = () => {
   return (
     <div className="flex w-[100%] min-h-screen bg-white items-center justify-center">
@@ -8,10 +10,26 @@ const FeatureDetails = () => {
         </h1>
         <div className="flex justify-center items-center">
           <div className="grid lg:grid-rows-2 lg:grid-flow-col gap-10 align-items-center w-full">
-            <CardFeature />
-            <CardFeature />
-            <CardFeature />
-            <CardFeature />
+            <CardFeature
+              Img={Img1}
+              Title="Admin Control"
+              desc="Admin Control, Fitur ini berfungsi untuk mengontrol laporan-laporan yang masuk dari masyarakat, dan memudahkan para petugas untuk menontrol laporan-laporan yang masuk."
+            />
+            <CardFeature
+              Img={Img2}
+              Title="User Control"
+              desc="User Control, Fitur ini di sediakan untuk user agar dapat dengan mudah melaporkan keluhan yang ingin di sampaikan kepada perangkat desa."
+            />
+            <CardFeature
+              Img={Img1}
+              Title="Admin Control"
+              desc="Admin Control, Fitur ini berfungsi untuk mengontrol laporan-laporan yang masuk dari masyarakat, dan memudahkan para petugas untuk menontrol laporan-laporan yang masuk."
+            />
+            <CardFeature
+              Img={Img2}
+              Title="User Control"
+              desc="User Control, Fitur ini di sediakan untuk user agar dapat dengan mudah melaporkan keluhan yang ingin di sampaikan kepada perangkat desa."
+            />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import NavBarUser from "../components/elements/NavBarUser";
 import PertanyaanUmum from "../components/section/PertanyaanUmum";
 import FormPertanyaan from "../components/section/FormPertanyaan";
+import Footer from "../components/elements/Footer";
 
 const Faq = () => {
   return (
@@ -13,6 +14,7 @@ const Faq = () => {
           <FormPertanyaan />
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

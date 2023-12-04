@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMe } from "../features/authSlice";
+import Footer from "../components/elements/Footer";
 
 const Laporan = () => {
   const dispatch = useDispatch();
@@ -71,6 +72,7 @@ const Laporan = () => {
           ))}
         </div>
       </div>
+      <Footer/>
     </>
   );
 };
