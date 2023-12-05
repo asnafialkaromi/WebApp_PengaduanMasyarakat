@@ -4,8 +4,18 @@ import axios from "axios";
 import Button from "../elements/Button";
 import InputText from "../elements/InputText";
 import TextArea from "../elements/TextArea";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const FormBuatLaporan = () => {
+  window.scrollTo(0, 0);
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [noTelp, setNoTelp] = useState("");
@@ -38,7 +48,7 @@ const FormBuatLaporan = () => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center bg-slate-200">
+    <div className="flex h-screen w-full items-center justify-center bg-slate-200" data-aos="fade-down" data-aos-duration="1500">
       <div className="flex flex-col gap-3 xl:max-w-[1000px] w-full h-fit mt-[80px]">
         <h2 className="text-4xl font-bold text-black text-left pb-3">
           Buat Pengaduan

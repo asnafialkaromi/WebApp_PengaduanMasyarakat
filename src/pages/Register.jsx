@@ -5,6 +5,8 @@ import ImageLogin from "../assets/img/ImageLogin.png";
 import InputText from "../components/elements/InputText";
 import Button from "../components/elements/Button";
 import { CreateUser, reset } from "../features/authSlice";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const RegisterPage = () => {
   const [name, setName] = useState("");
@@ -19,6 +21,12 @@ const RegisterPage = () => {
   const { user, isError, isSuccess, isLoading, message } = useSelector(
     (state) => state.auth
   );
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
 
   useEffect(() => {
     if (user || isSuccess) {
@@ -49,10 +57,16 @@ const RegisterPage = () => {
           <img src={ImageLogin} alt="" className="h-full w-full object-fit" />
         </div>
         <div className="bg-gradient-to-b from-[#003F9A] to-[#2871CC] lg:w-1/2 h-full w-full flex flex-col items-center justify-center gap-6 py-10">
-          <h1 className="text-4xl font-bold text-white text-center">
+          <h1
+            className="text-4xl font-bold text-white text-center"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+          >
             Layanan Online <br /> Website Pengaduan Masyarakat
           </h1>
           <form
+            data-aos="fade-up"
+            data-aos-duration="2000"
             onSubmit={Auth}
             className="lg:w-3/4 w-[80%] h-fit py-6 px-14 bg-white  rounded-[20px]"
           >
